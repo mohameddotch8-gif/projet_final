@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Galaxy Gym - Création et Connexion</title>
+   <style>
+/* Style général */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+
+    /* CENTRAGE */
+    display: flex;
+    flex-direction: column;
+}
+
+/* En-tête */
+.header {
+    background-color: #1e1e2f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Conteneur principal */
+.container {
+    flex: 1; /* prend l’espace restant */
+    display: flex;
+    justify-content: center;  /* centre horizontalement */
+    align-items: center;      /* centre verticalement */
+}
+
+/* Section du formulaire */
+.form-section {
+    background-color: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titres */
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Labels */
+.form-section label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Champs de saisie */
+.form-section input,
+.form-section select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Focus */
+.form-section input:focus,
+.form-section select:focus {
+    outline: none;
+    border-color: #1e1e2f;
+}
+
+/* Bouton */
+.form-section button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1e1e2f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-section button:hover {
+    background-color: #34345a;
+}
+
+/* Pied de page */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1e1e2f;
+    color: white;
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+
+  
+    <div class="form-section">
+        <form method="POST" action="cnx.php" onsubmit="return verifierConnexion();">
+            <h2>Connexion</h2>
+
+            <label for="login_conn">Identifiant</label>
+            <input type="text" id="login_conn" name="login_conn" required>
+
+            <label for="password_conn">Mot de passe</label>
+            <input type="password" id="password_conn" name="password_conn" required>
+
+            <button type="submit" name="login_account">Se connecter</button>
+            
+        </form>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>&copy; 2025 Galaxy Gym. Tous droits réservés.</p>
+</div>
+
+<script>
+    
+    function alpha(ch) {
+        ch = ch.toUpperCase();
+        let i = 0;
+        while (i < ch.length && ((ch[i] >= "A" && ch[i] <= "Z") || ch[i] === " ")) { i++; }
+        return i === ch.length;
+    }
+
+    function validPassword(pwd) { return pwd.length >= 6; }
+
+    function verifierCreation() {
+        let nom = document.getElementById("name").value;
+        let prenom = document.getElementById("surname").value;
+        let login = document.getElementById("login").value;
+        let password = document.getElementById("password").value;
+        let poids = document.getElementById("poids").value;
+        let sexe = document.getElementById("sexe").value;
+
+        if (!alpha(nom) || !alpha(prenom)) { alert("Nom et prénom uniquement en lettres."); return false; }
+        if (login === "") { alert("Identifiant obligatoire."); return false; }
+        if (!validPassword(password)) { alert("Mot de passe >= 6 caractères."); return false; }
+        if (poids <= 0) { alert("Poids invalide."); return false; }
+        if (sexe === "") { alert("Sélectionner le sexe."); return false; }
+        return true;
+    }
+
+   
+    function verifierConnexion() {
+        let login = document.getElementById("login_conn").value;
+        let password = document.getElementById("password_conn").value;
+        if (login === "" || password === "") { alert("Veuillez remplir tous les champs."); return false; }
+        return true;
+    }
+</script>
+
+</body>
+</html>

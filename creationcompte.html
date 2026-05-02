@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+/* Style général */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+}
+
+/* En-tête */
+.header {
+    background-color: #1e1e2f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Section du formulaire */
+.form-section {
+    background-color: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titres */
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Labels */
+.form-section label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Champs de saisie */
+.form-section input,
+.form-section select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Focus */
+.form-section input:focus,
+.form-section select:focus {
+    outline: none;
+    border-color: #1e1e2f;
+}
+
+/* Bouton */
+.form-section button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1e1e2f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-section button:hover {
+    background-color: #34345a;
+}
+
+/* Pied de page */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #1e1e2f;
+    color: white;
+}
+</style>
+
+<body>
+   <div class="header">
+    <h1>Galaxy Gym - Création de compte</h1>
+</div>
+
+<div class="container">
+    <div class="form-section">
+        <form method="POST" action="create_account.php">
+            <h2>Informations de l'adhérent</h2>
+
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+
+            <label for="surname">Prénom</label>
+            <input type="text" id="surname" name="surname" placeholder="Entrez votre prénom" required>
+
+            <label for="login">Identifiant</label>
+            <input type="text" id="login" name="login" placeholder="Choisissez un identifiant" required>
+
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Entrez un mot de passe" required>
+
+            <label for="poids">Poids (kg)</label>
+            <input type="number" id="poids" name="poids" placeholder="Votre poids" required>
+
+            <label for="sexe">Sexe</label>
+            <select id="sexe" name="sexe" required>
+                <option value="" disabled selected>Sélectionnez</option>
+                <option value="Homme">Homme</option>
+                <option value="Femme">Femme</option>
+            </select>
+
+            <button type="submit">Créer le compte</button>
+        </form>
+    </div> 
+</body>
+</html>
+<script>
+    function alpha(ch) {
+        ch = ch.toUpperCase();
+        let i = 0;
+        while (i < ch.length && ((ch[i] >= "A" && ch[i] <= "Z") || ch[i] === " ")) {
+            i++;
+        }
+        return i === ch.length;
+    }
+    function validPassword(pwd) {
+        return pwd.length >= 6;
+    }
+    function verifierFormulaire() {
+        let nom = document.getElementById("name").value;
+        let prenom = document.getElementById("surname").value;
+        let login = document.getElementById("login").value;
+        let password = document.getElementById("password").value;
+        let poids = document.getElementById("poids").value;
+        let sexe = document.getElementById("sexe").value;
+        if (!alpha(nom)) {
+            alert("Le nom doit contenir uniquement des lettres.");
+            return false;
+        }
+        if (!alpha(prenom)) {
+            alert("Le prénom doit contenir uniquement des lettres.");
+            return false;
+        }
+
+        if (login === "") {
+            alert("L'identifiant est obligatoire.");
+            return false;
+        }
+
+        if (!validPassword(password)) {
+            alert("Le mot de passe doit contenir au moins 6 caractères.");
+            return false;
+        }
+
+        if (poids <= 0) {
+            alert("Veuillez entrer un poids valide.");
+            return false;
+        }
+
+        if (sexe === "") {
+            alert("Veuillez sélectionner le sexe.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+

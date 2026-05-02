@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leon | Template One</title>
+    <!-- Main Template CSS File -->
+   <link rel="stylesheet" href="css/leon.css">
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
+      rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <div class="header">
+      <div class="container">
+        <img  class="logo" src="img/logo.png" alt="" />
+        <div class="links">
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a  href="formular.html" target="_blank">Inscription</a></li>
+            <li><a  href="creationcompte.html" target="_blank">Crée un compte </a></li>
+            <li><a  href="connexion.html" target="_blank">se connecter</a></li>
+            <li><a  href="plan.html" target="_blank">Planning</a></li>
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start Landing Section -->
+    <div class="landing">
+      <div class="intro-text">
+        <h1 id="user-name">  Galaxy Gym Hello There</h1>
+      </div>
+    </div>
+    <script>
+             
+        var userName = prompt("Please enter votre nom:");
+        
+      
+        if (userName) {
+            document.getElementById("user-name").textContent = "Hello, " + userName + "!";
+        } else {
+            document.getElementById("user-name").textContent = "Hello, Anonymous!";
+        }
+    </script> 
+    <!-- End Landing Section -->
+    <!-- Start Features -->
+    <div class="features">
+      <div class="container">
+        <div class="feat">
+          <i class="fa-solid fa-dumbbell"></i>
+          <h3>Les Cours collectifs</h3>
+          <p>Participez aux cours collectifs pour sculptez, renforcez et affinez votre corps! Se défouler avec un programme riche et varié chez Galaxy Gym votre salle de sport et de fitness situé à Montplaisir, en plein cœur de tunis.</p>
+        </div>
+        <div class="feat">
+          <i class="fa-solid fa-dumbbell"></i>
+          <h3>FOOT ACADEMY</h3>
+          <p>GALAXY FOOT ACADEMY est une section « initiation football» visant à encadrer et soutenir les enfants à partir de 04 ans et à leur permettre de pouvoir commencer à jouer au football sans obligatoirement être affilié à un club de football. Sa finalité n‘est pas uniquement sportive, mais aussi éducative et sociale. C’est un complément[…]</p>
+        </div>
+        <div class="feat">
+          <i class="fa-solid fa-dumbbell""></i>
+          <h3>Taekwondo pour filles</h3>
+          <p>Le taekwondo est un art martial qui peut se pratiquer très tôt. En Corée,pays d’où il est originaire, la plupart des enfants le pratique et il fait partie de leur éducation.</p>
+        </div>
+      </div>
+    </div>
+    <!-- End Features -->
+    <!-- Start Services -->
+    <div class="services" id="services">
+      <div class="container">
+        <h2 class="special-heading">Services</h2>
+        <p>Don't be busy, be productive</p>
+        <div class="services-content">
+          <div class="col">
+            <!-- Start Service -->
+            <div class="srv">
+              <i class="fa-solid fa-dumbbell"></i>
+              <div class="text">
+                <h3>Help</h3>
+                <p>
+                    we have the cotch ever so you can build a good body
+                </p>
+              </div>
+            </div>
+            <div class="srv">
+              <i class="fa-solid fa-dumbbell"></i>
+              <div class="text">
+                <h3>equipement</h3>
+                            <p> we offre to you the best equipemnt more safe and comfortable</p>
+              </div>
+            </div>
+            <!-- End Service -->
+          </div>
+          <div class="col">
+            <!-- Start Services -->
+            <div class="srv">
+              <i class="fa-solid fa-dumbbell"></i>
+              <div class="text">
+                <h3>promaotion</h3>
+                <p> you can get promation when you paye 3 month</p>
+              </div>
+            </div>
+            <div class="srv">
+              <i class="fa-solid fa-dumbbell"></i>
+              <div class="text">
+                <h3>helthy food</h3>
+                <p>with out food you can't build a body so we offre you a tips to do it</p>
+              </div>
+            </div>
+            <!-- End Services -->
+          </div>
+          <div class="col">
+            <div class="image image-column">
+              <img decoding="async" src="img/empty-gym-backgrounds-and-exercise-building-for-sports-training-and-fitness-wellness-and-weightlifting-health-club-interior-space-recreation-2KEE99A.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Services -->
+    <!-- Start Portfolio -->
+    <div class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="special-heading">Portfolio</h2>
+        <p>If you do it right, it will last forever.</p>
+        <div class="portfolio-content">
+          <div class="card">
+            <img decoding="async" src="img/portfelio1.jpg" alt="" />
+            <div class="info">
+              <a href="index1.html" target="_blank"><h3>Espace de musculation</h3></a>
+              <p>Gagner en tonicité, modeler votre silhouette, augmenter votre force, développer votre masse musculaire… Quel que soit votre objectif,
+                 Galaxy Gym met à votre disposition un espace musculation complet.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img decoding="async" src="img/multi-gym-1000x1000.jpeg" alt="" />
+            <div class="info">
+             <a href="index2.html" target="_blank"> <h3>Espace de Fitness</h3></a>
+              <p>Galaxy Gym vous propose des cours du lundi au dimanche dans son espace Fitness.
+                Tous les cours sont encadrés par des professionnels</p>
+            </div>
+          </div>
+          <div class="card">
+            <img decoding="async" src="img/mitos-sobre-el-ayuno-1024x576.jpg" alt="" />
+            <div class="info">
+              <a href="index3.html" target="_blank"><h3>Espace cardio training</h3></a>
+              <p>L’espace cardio-training :
+
+                Tapis de course
+                Vélos droits et semi-allongés
+                Vélos elliptiques
+                Steppers
+                Rameur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Portfolio -->
+    <!-- Start About -->
+    <div class="about" id="about">
+      <div class="container">
+        <h2 class="special-heading">About</h2>
+        <p>Less is more work</p>
+        <div class="about-content">
+          <div class="image">
+            <img decoding="async" src="img/empty-gym-backgrounds-and-exercise-building-for-sports-training-and-fitness-wellness-and-weightlifting-health-club-interior-space-recreation-2KEE99A.jpg" alt="" />
+          </div>
+          <div class="text">
+            <p>
+                Profitez d'un cadre agréable, des espaces aérés et climatisés, des équipements de pointe et des coachs qualifiés pour vous encadrer, vous motiver et vous soutenir. Galaxy Gym est une salle de sport et de fitness qui vous propose des cours variés dans un espace de Fitness destiné aux adultes, ados et enfants. Vous trouverez tous ce qu'il vous faut dans nos espaces de musculation et Cardio Training avec un matériel de qualité
+            </p>
+            <hr />
+            <p>
+                Bac sport
+                Préparez le bac sport avec Galaxy Gym
+                Galaxy Gym vous propose des séances de préparation et d’entrainement en gymnastique pour le Bac Sport (filles/garçons).
+                
+                Des spécialistes à votre disposition et des horaires bien flexibles.
+                
+                Au programme :
+                
+                Conseiller et aider les candidats à choisir un enchaînement adapté à sa condition physique.
+                Travailler sur le renforcement musculaire et la souplesse pour préparer votre corps à enchaînement.
+                Préparer l’enchaînement complet et spécifique selon les capacités des candidats.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End About -->
+    <!-- Start Contact -->
+    <div class="contact" id="contact">
+      <div class="container">
+        <h2 class="special-heading">Contact</h2>
+        <p>We are born to create</p>
+        <div class="info">
+          <p class="label">Feel free to drop us a line at:</p>
+          <a href="mailto:mohameddotch8@gmail.com?subject=Contact" class="link">Galaxygym2@gmail.com</a>
+          <div class="social">
+            Find Us On Social Networks
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Contact -->
+    <!-- Start Footer -->
+    <div class="footer">&copy; 2025 <span>GYM</span> All Right Reserved</div>
+    <!-- End Footer -->
+  </body>
+</html>
